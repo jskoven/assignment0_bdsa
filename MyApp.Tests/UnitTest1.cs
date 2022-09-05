@@ -20,7 +20,6 @@ public class UnitTest1
     public void six_is_not_a_leap_year()
     {
         //Arrange
-
         //Act
         var actual  = LeapYear.IsLeapYear(6);
 
@@ -31,7 +30,6 @@ public class UnitTest1
     public void hundred_is_not_leap_year()
     {
         //Arrange
-        var leapYear = new LeapYear();
 
         //Act
         var actual  = LeapYear.IsLeapYear(100);
@@ -44,7 +42,6 @@ public class UnitTest1
     public void divisible_by_fourhundred_is_leap_year()
     {
         //Arrange
-        var leapYear = new LeapYear();
 
         //Act
         var actual  = LeapYear.IsLeapYear(40000);
@@ -57,7 +54,6 @@ public class UnitTest1
     public void number_before_1582_is_()
     {
         //Arrange
-        var leapYear = new LeapYear();
         //Act
         var actual = LeapYear.IsLeapYear(1440);
         //Assert
@@ -68,7 +64,6 @@ public class UnitTest1
     public void negative_number_inserted()
     {
         //Arrange
-        var leapYear = new LeapYear();
         //Act
         var actual = LeapYear.IsLeapYear(-4);
         //Assert
