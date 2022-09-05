@@ -1,26 +1,21 @@
 ﻿using MyApp;
 
-var leapYear = new LeapYear();
-
-Console.Write("Enter a year of your choice and we'll tell you if it's a leap year!");
-Console.WriteLine();
+Console.WriteLine("Enter a year of your choice and we'll tell you if it's a leap year!");
 var year = Console.ReadLine();
 int yearInt = 0;
-try
-{
+
+try {
     yearInt = Int32.Parse(year);
-}
-catch (FormatException)
+}catch (FormatException)
 {
     Console.Write("Error! You must insert a year in the format XXXX, where X is a number!");
-}
-catch (Exception E)
+}catch (Exception E)
 {
     Console.Write("Error! Unknown error has happened.");
     Console.Write(E.StackTrace);
 }
 
-if (leapYear.isLeapYear(yearInt))
+if (LeapYear.IsLeapYear(yearInt))
 {
     Console.Write("Yay");
 }
