@@ -2,8 +2,12 @@
 
 public class LeapYear
 {
-    public bool isLeapYear(int year)
+    public static bool IsLeapYear(int year)
     {
+        if (year < 1582)
+        {
+            return false;
+        } 
         if (year % 4 == 0)
         {
             if (year % 100 == 0)
@@ -12,11 +16,18 @@ public class LeapYear
                 {
                     return true;
                 }
-
                 return false;
             }
             return true;
         }
         return false;
     }
+
+    public static bool IsLeapYear(String wrongParameter)
+    {
+        throw new FormatException();
+    }
+    
+    
 }
+
